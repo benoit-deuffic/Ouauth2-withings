@@ -20,20 +20,21 @@ RUN apk update \
         gettext-dev \
         oniguruma-dev \
         libzip-dev \
-        imagemagick-dev \
         zlib-dev \
         unzip \
         zip \
         git \
         iputils \
         net-tools \
-        postgresql-client \
+        gcc \
+        libc-dev \
+        pkg-config \
+        libpcre3-dev \
     && \
     # pecl PHP extensions
     pecl install \
-        imagick-3.4.4 \
-        redis \
         xdebug-2.8.1 \
+        oauth \
     && \
     # Configure PHP extensions
     docker-php-ext-configure \
@@ -58,11 +59,11 @@ RUN apk update \
         sysvsem \
         sysvshm \
         zip \
+        curl \
     && \
     # Enable PHP extensions
     docker-php-ext-enable \
-        imagick \
-        redis \
+        curl \
         xdebug
 
 # Append our php.ini overrides to the end of the file
