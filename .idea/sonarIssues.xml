@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/Oauth2Api.php">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
